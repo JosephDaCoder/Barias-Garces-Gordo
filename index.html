@@ -1,51 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Basic Ecommerce Demo</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Manager</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Product Manager</h1>
 
-  <section>
-    <h2>Add / Update Product</h2>
+    <header>
+        <h1>Product Manager</h1>
+        <p>Manage your products quickly and efficiently.</p>
+    </header>
 
-    <input type="hidden" id="productId" />
+    <main>
 
-    <label>
-      Product Name
-      <input type="text" id="name" placeholder="Example: T-Shirt" />
-    </label>
+        <!-- Product Form -->
+        <section class="form-container">
 
-    <label>
-      Description
-      <input type="text" id="description" placeholder="Short product description" />
-    </label>
+            <h2>Add / Update Product</h2>
 
-    <label>
-      Price in PHP
-      <input type="number" id="price" placeholder="Example: 250" />
-    </label>
+            <input type="hidden" id="productId">
 
-    <label>
-      Stock
-      <input type="number" id="stock" placeholder="Example: 10" />
-    </label>
+            <div class="form-group">
+                <label>Product Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Example: T-Shirt">
+            </div>
 
-    <button onclick="saveProduct()">Save Product</button>
-    <button onclick="clearForm()">Clear</button>
-  </section>
+            <div class="form-group">
+                <label>Description</label>
+                <input
+                    type="text"
+                    id="description"
+                    placeholder="Short product description">
+            </div>
 
-  <hr />
+            <div class="form-group">
+                <label>Price (PHP)</label>
+                <input
+                    type="number"
+                    id="price"
+                    placeholder="250">
+            </div>
 
-  <section>
-    <h2>Products</h2>
-    <div id="productList"></div>
-  </section>
+            <div class="form-group">
+                <label>Stock</label>
+                <input
+                    type="number"
+                    id="stock"
+                    placeholder="10">
+            </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="app.js"></script>
+            <div class="controls">
+                <button class="primary" onclick="saveProduct()">
+                    Save Product
+                </button>
+
+                <button onclick="clearForm()">
+                    Clear
+                </button>
+            </div>
+
+        </section>
+
+        <!-- Product List -->
+
+        <section>
+
+            <h2 style="margin-bottom:25px;">
+                Products
+            </h2>
+
+            <div id="productList"></div>
+
+        </section>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="app.js"></script>
+
 </body>
 </html>

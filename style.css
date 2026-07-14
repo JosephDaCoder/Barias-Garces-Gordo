@@ -17,7 +17,7 @@ body{
     radial-gradient(circle at bottom right,#312e81 0%,transparent 35%);
 }
 
-/* ================= HEADER ================= */
+
 
 header{
 
@@ -67,7 +67,7 @@ h2{
 
 }
 
-/* ================= MAIN ================= */
+
 
 main{
 
@@ -85,7 +85,7 @@ main{
 
 }
 
-/* ================= FORM ================= */
+
 
 .form-container{
 
@@ -170,7 +170,7 @@ input:focus{
 
 }
 
-/* ================= BUTTONS ================= */
+
 
 .controls{
 
@@ -232,7 +232,7 @@ button:not(.primary):hover{
 
 }
 
-/* ================= PRODUCTS ================= */
+
 
 .products-section{
 
@@ -260,7 +260,7 @@ button:not(.primary):hover{
 
 }
 
-/* ================= PRODUCT CARD ================= */
+
 
 .product{
 
@@ -380,7 +380,7 @@ button:not(.primary):hover{
 
 }
 
-/* ================= RESPONSIVE ================= */
+
 
 @media(max-width:1000px){
 

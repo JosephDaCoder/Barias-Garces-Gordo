@@ -61,7 +61,7 @@ body > h1 {
 }
 
 body > h1::after {
-  content: "PRODUCT MANAGER";
+  content: "CREATE - READ - UPDATE - DELETE";
   display: block;
   font-family: var(--font-body);
   font-style: normal;
@@ -200,11 +200,6 @@ body > section:last-of-type > h2 {
   gap: 10px;
 }
 
-body > section:last-of-type > h2::before {
-  content: "A - Z";
-  color: var(--accent);
-  font-size: 1.50rem;
-}
 
 #productList {
   display: grid;
@@ -361,4 +356,22 @@ body > section:last-of-type > h2::before {
   body > section:first-of-type {
     position: static;
   }
+}
+body > section:last-of-type {
+  position: relative;
+}
+
+body > section:last-of-type::before {
+  content: "A - Z";
+  position: absolute;
+  left: 130px;
+  top: 8px;
+  transform: none;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.2em;
+  color: #cbff4d;
+  
+  white-space: nowrap;
 }

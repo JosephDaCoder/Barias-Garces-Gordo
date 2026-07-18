@@ -72,7 +72,7 @@ body > h1::after {
   margin-top: 10px;
 }
 
-/* ---------- Kill the old <hr> â€” grid handles separation ---------- */
+/* ---------- Kill the old <hr> — grid handles separation ---------- */
 
 body > hr {
   display: none;
@@ -201,9 +201,9 @@ body > section:last-of-type > h2 {
 }
 
 body > section:last-of-type > h2::before {
-  content: "â—†";
+  content: "A - Z";
   color: var(--accent);
-  font-size: 0.9rem;
+  font-size: 1.50rem;
 }
 
 #productList {
@@ -212,14 +212,23 @@ body > section:last-of-type > h2::before {
   gap: 18px;
 }
 
-#productList:empty::before {
-  content: "Nothing here yet â€” add your first product on the left.";
+#productList:empty {
   grid-column: 1 / -1;
   border: 2px dashed var(--paper-dim);
   padding: 40px 20px;
   text-align: center;
-  color: var(--ink-soft);
   font-size: 0.9rem;
+}
+
+#productList:empty::before {
+  content: "Nothing here yet —  ";
+  color: var(--ink-soft);
+}
+
+#productList:empty::after {
+  content: "add your first product on the left.";
+  color: #ff2d55;
+  opacity: 0.9;
 }
 
 .product {
@@ -352,4 +361,4 @@ body > section:last-of-type > h2::before {
   body > section:first-of-type {
     position: static;
   }
-  }
+}

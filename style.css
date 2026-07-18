@@ -61,7 +61,7 @@ body > h1 {
 }
 
 body > h1::after {
-  content: "PRODUCT MANAGER";
+  content: "CREATE - READ - UPDATE - DELETE";
   display: block;
   font-family: var(--font-body);
   font-style: normal;
@@ -72,6 +72,7 @@ body > h1::after {
   margin-top: 10px;
 }
 
+/* ---------- Kill the old <hr> — grid handles separation ---------- */
 
 
 body > hr {
@@ -200,11 +201,6 @@ body > section:last-of-type > h2 {
   gap: 10px;
 }
 
-body > section:last-of-type > h2::before {
-  content: "â—†";
-  color: var(--accent);
-  font-size: 0.9rem;
-}
 
 #productList {
   display: grid;
@@ -212,14 +208,23 @@ body > section:last-of-type > h2::before {
   gap: 18px;
 }
 
-#productList:empty::before {
-  content: "Nothing here yet â€” add your first product on the left.";
+#productList:empty {
   grid-column: 1 / -1;
   border: 2px dashed var(--paper-dim);
   padding: 40px 20px;
   text-align: center;
-  color: var(--ink-soft);
   font-size: 0.9rem;
+}
+
+#productList:empty::before {
+  content: "Nothing here yet —  ";
+  color: var(--ink-soft);
+}
+
+#productList:empty::after {
+  content: "add your first product on the left.";
+  color: #ff2d55;
+  opacity: 0.9;
 }
 
 .product {
@@ -352,4 +357,22 @@ body > section:last-of-type > h2::before {
   body > section:first-of-type {
     position: static;
   }
-  }
+}
+body > section:last-of-type {
+  position: relative;
+}
+
+body > section:last-of-type::before {
+  content: "A - Z";
+  position: absolute;
+  left: 130px;
+  top: 8px;
+  transform: none;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.2em;
+  color: #c4ff39;
+  
+  white-space: nowrap;
+}
